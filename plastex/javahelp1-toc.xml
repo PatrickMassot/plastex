@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" 
+ "http://java.sun.com/products/javahelp/toc_1_0.dtd"> 
+<toc version="1.0"> 
+<tocitem>plasTeX &#8212; A Python Framework for Processing LaTeX Documents
+    <tocitem target="a0000000002">Introduction
+        
+    </tocitem><tocitem target="sec:command-line">plastex &#8212; The Command-Line Interface
+        <tocitem target="a0000000003">Command-Line and Configuration Options
+            <tocitem target="sec:general-options">General Options
+               
+            </tocitem><tocitem target="sec:config-document">Document Properties
+               
+            </tocitem><tocitem target="a0000000004">Counters
+               
+            </tocitem><tocitem target="sec:config-links">Document Links
+               
+            </tocitem><tocitem target="sec:config-files">Input and Output Files
+               
+            </tocitem><tocitem target="sec:config-images">Image Options
+               
+            </tocitem><tocitem target="sec:config-html5">HTML5 Renderer Options
+               
+            </tocitem>
+        </tocitem>
+    </tocitem><tocitem target="sec:document">The plas Document
+        <tocitem target="sec:sections">Sections
+            <tocitem target="sec:links">Navigation and Links
+               
+            </tocitem><tocitem target="sec:tableofcontents">Table of Contents
+               
+            </tocitem>
+        </tocitem><tocitem target="sec:paragraphs">Paragraphs
+            
+        </tocitem><tocitem target="sec:complexdoc">Complex Structures
+            <tocitem target="sec:lists">Lists
+               
+            </tocitem><tocitem target="a0000000005">Bibliography
+               
+            </tocitem><tocitem target="sec:arrays">Arrays and Tabular Environments
+               
+            </tocitem><tocitem target="a0000000006">Indexes
+               
+            </tocitem>
+        </tocitem>
+    </tocitem><tocitem target="sec:macros">Understanding Macros and Packages
+        <tocitem target="a0000000007">Defining Macros in 
+            
+        </tocitem><tocitem target="a0000000008">Defining Macros in Python
+            <tocitem target="sec:macroclasses">Python Classes
+               
+            </tocitem><tocitem target="sec:inimacros">INI Files
+               
+            </tocitem><tocitem target="sec:contextmacros">The Document Context
+               
+            </tocitem>
+        </tocitem><tocitem target="sec:packages">Packages
+            
+        </tocitem>
+    </tocitem><tocitem target="a0000000009">Renderers
+        <tocitem target="sec:simple-renderer-ex">Simple Renderer Example
+            <tocitem target="a0000000010">Extending the Simple Renderer
+               
+            </tocitem><tocitem target="subsec:renderer-from-script">Using a Renderer from the plastex Script
+               
+            </tocitem>
+        </tocitem><tocitem target="sec:renderable">Renderable Objects
+            <tocitem target="a0000000011">Determining the Correct Rendering Method
+               
+            </tocitem><tocitem target="a0000000012">Generating Files
+               
+            </tocitem><tocitem target="a0000000013">Generating Images
+               
+            </tocitem><tocitem target="a0000000014">Generating Vector Images
+               
+            </tocitem><tocitem target="a0000000015">Static Images
+               
+            </tocitem>
+        </tocitem><tocitem target="sec:zpt">Page Template Renderer
+            <tocitem target="a0000000016">Defining and Using Templates
+               
+            </tocitem><tocitem target="a0000000017">Defining and Using Themes
+               
+            </tocitem><tocitem target="sec:zpttutorial">Zope Page Template Tutorial
+               
+            </tocitem>
+        </tocitem><tocitem target="a0000000018">XHTML Renderer
+            <tocitem target="a0000000019">Themes
+               
+            </tocitem>
+        </tocitem><tocitem target="sec:html5">HTML5 Renderer
+            <tocitem target="sec:html5-pkg">Interactions with packages
+               
+            </tocitem>
+        </tocitem><tocitem target="a0000000020">tBook Renderer
+            
+        </tocitem><tocitem target="a0000000021">DocBook Renderer
+            
+        </tocitem>
+    </tocitem><tocitem target="a0000000022">plas Frameworks and APIs
+        <tocitem target="sec:macros-api">plasTeX &#8212; The Python Macro and Document Interfaces
+            <tocitem target="a0000000023">Macro Objects
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.ConfigManager">plasTeX.ConfigManager &#8212; plas Configuration
+            <tocitem target="a0000000024">ConfigManager Objects
+               
+            </tocitem><tocitem target="a0000000025">ConfigSection Objects
+               
+            </tocitem><tocitem target="a0000000026">Configuration Option Types
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.DOM">plasTeX.DOM &#8212; The plas Document Object Model (DOM)
+            <tocitem target="a0000000027">plas vs. XML
+               
+            </tocitem><tocitem target="a0000000028">Node Objects
+               
+            </tocitem><tocitem target="a0000000029">DocumentFragment Objects
+               
+            </tocitem><tocitem target="a0000000030">Element Objects
+               
+            </tocitem><tocitem target="a0000000031">Text Objects
+               
+            </tocitem><tocitem target="a0000000032">Document Objects
+               
+            </tocitem><tocitem target="a0000000033">Command Objects
+               
+            </tocitem><tocitem target="a0000000034">Environment Objects
+               
+            </tocitem><tocitem target="a0000000035">TeXFragment Objects
+               
+            </tocitem><tocitem target="a0000000036">TeXDocument Objects
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.TeX">plasTeX.TeX &#8212; The  Stream
+            <tocitem target="a0000000037">TeX Objects
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.Context">plasTeX.Context &#8212; The  Context
+            <tocitem target="a0000000038">Context Objects
+               
+            </tocitem><tocitem target="sec:context-language">Context language
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.Renderers">plasTeX.Renderers &#8212; The plas Rendering Framework
+            <tocitem target="a0000000039">Renderer Objects
+               
+            </tocitem><tocitem target="a0000000040">Renderable MixIn
+               
+            </tocitem>
+        </tocitem><tocitem target="module-plasTeX.Imagers">plasTeX.Imagers &#8212; The plas Imaging Framework
+            <tocitem target="a0000000041">Imager Objects
+               
+            </tocitem><tocitem target="a0000000042">Image Objects
+               
+            </tocitem>
+        </tocitem>
+    </tocitem><tocitem target="a0000000043">About This Document
+        
+    </tocitem><tocitem target="a0000000044">Frequently Asked Questions
+        <tocitem target="a0000000045">Parsing 
+            <tocitem target="a0000000046">How can I make plas work with my complicated macros?
+               
+            </tocitem><tocitem target="a0000000047">How can I get plas to find my  packages?
+               
+            </tocitem>
+        </tocitem>
+    </tocitem><tocitem target="a0000000048">Index
+        
+    </tocitem>
+</tocitem>
+</toc>

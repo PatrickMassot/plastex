@@ -3,11 +3,11 @@
 <head>
 <meta name="generator" content="plasTeX" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-<title>plasTeX — A Python Framework for Processing LaTeX Documents: How can I make plasTeX work with my complicated macros?</title>
+<title>plasTeX — A Python Framework for Processing LaTeX Documents: Index</title>
 
-<link href="sect0049.html" title="How can I get plasto find my packages?" rel="next" />
-<link href="sect0047.html" title="Parsing " rel="prev" />
-<link href="sect0047.html" title="Parsing " rel="up" />
+
+<link href="sect0047.html" title="How can I get plas to find my  packages?" rel="prev" />
+<link href="index.html" title="plasTeX — A Python Framework for Processing LaTeX Documents" rel="up" />
 <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
@@ -15,16 +15,16 @@
 <div class="navigation">
 <table cellspacing="2" cellpadding="0" width="100%">
 <tr>
-<td><a href="sect0047.html" title="Parsing LaTeX"><img alt="Previous: Parsing LaTeX" border="0" src="icons/previous.gif" width="32" height="32" /></a></td>
+<td><a href="sect0047.html" title="How can I get plasTeX to find my LaTeX packages?"><img alt="Previous: How can I get plasTeX to find my LaTeX packages?" border="0" src="icons/previous.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0047.html" title="Parsing LaTeX"><img alt="Up: Parsing LaTeX" border="0" src="icons/up.gif" width="32" height="32" /></a></td>
+<td><a href="index.html" title="plasTeX — A Python Framework for Processing LaTeX Documents"><img alt="Up: plasTeX — A Python Framework for Processing LaTeX Documents" border="0" src="icons/up.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0049.html" title="How can I get plasTeX to find my LaTeX packages?"><img alt="Next: How can I get plasTeX to find my LaTeX packages?" border="0" src="icons/next.gif" width="32" height="32" /></a></td>
 
+<td><img border="0" alt="" src="icons/blank.gif" width="32" height="32" /></td>
 <td class="navtitle" align="center">plasTeX — A Python Framework for Processing LaTeX Documents</td>
 <td><a href="index.html" title="Table of Contents"><img border="0" alt="" src="icons/contents.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0050.html" title="Index"><img border="0" alt="" src="icons/index.gif" width="32" height="32" /></a></td>
+<td><a href="sect0048.html" title="Index"><img border="0" alt="" src="icons/index.gif" width="32" height="32" /></a></td>
 
 <td><img border="0" alt="" src="icons/blank.gif" width="32" height="32" /></td>
 </tr>
@@ -38,30 +38,1543 @@
 </span>
 
 </span><span>
-<span>
-<a href="sect0046.html">Frequently Asked Questions</a> <b>:</b>
-</span>
-
-</span><span>
-<span>
-<a href="sect0047.html">Parsing L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X</a> <b>:</b>
-</span>
-
-</span><span>
 
 <span>
-<b class="current">How can I make plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X work with my complicated macros?</b>
+<b class="current">Index</b>
 </span>
 </span>
 <hr />
 </div>
 
-<div><h2 id="a0000020199">B.1.1 How can I make plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X work with my complicated macros?</h2>
-<p>While plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X makes a valiant effort to expand all L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X macros, it isn’t T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X and may have problems if your macros are complicated. There are things that you can do to remedy the situation. If you are getting failures or warnings, you can do one of two things: 1) you can create a simplified version of the macro that plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X uses for its work, while L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X uses the more complicated one, or 2) you can implement the macro as a Python class. </p><p>In the first solution, you can use the \<tt class="ttfamily">ifplastex</tt> construct to wrap your plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X and L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X versions of the macros. You can even just remove parts of the macros. See the example below. </p><pre>
-% Print a double line, then bold the text.  
-% In plasTeX, leave the lines out.
-\newcommand{\mymacro}[1]{\ifplastex\else\vspace*{1in}\fi\textbf{#1}}
-</pre><p>Depending on how complicated you macro is, you may want to implement it as a Python class instead of a L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X macro. Using a Python class gives you full access to all of the plasT<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X internal mechanisms to do whatever you need to do in your macro. To read more about writing Python class macros, see the section <a href="sec-macros.html">4</a>. </p></div>
+<div><h1>Index</h1>
+
+<div>
+
+<div align="center"><span><a href="#IDXGROUP._">_ (Underscore)</a><span> | </span></span><span><a href="#IDXGROUP.A">A</a><span> | </span></span><span><a href="#IDXGROUP.B">B</a><span> | </span></span><span><a href="#IDXGROUP.C">C</a><span> | </span></span><span><a href="#IDXGROUP.D">D</a><span> | </span></span><span><a href="#IDXGROUP.E">E</a><span> | </span></span><span><a href="#IDXGROUP.F">F</a><span> | </span></span><span><a href="#IDXGROUP.G">G</a><span> | </span></span><span><a href="#IDXGROUP.H">H</a><span> | </span></span><span><a href="#IDXGROUP.I">I</a><span> | </span></span><span><a href="#IDXGROUP.J">J</a><span> | </span></span><span><a href="#IDXGROUP.K">K</a><span> | </span></span><span><a href="#IDXGROUP.L">L</a><span> | </span></span><span><a href="#IDXGROUP.M">M</a><span> | </span></span><span><a href="#IDXGROUP.N">N</a><span> | </span></span><span><a href="#IDXGROUP.O">O</a><span> | </span></span><span><a href="#IDXGROUP.P">P</a><span> | </span></span><span><a href="#IDXGROUP.R">R</a><span> | </span></span><span><a href="#IDXGROUP.S">S</a><span> | </span></span><span><a href="#IDXGROUP.T">T</a><span> | </span></span><span><a href="#IDXGROUP.U">U</a><span> | </span></span><span><a href="#IDXGROUP.V">V</a><span> | </span></span><span><a href="#IDXGROUP.W">W</a></span></div>
+
+<div class="theindex">
+
+<h2 id="IDXGROUP._">_ (Underscore)</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">__add__()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000123" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__add__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000205" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__cmp__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000209" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__getitem__()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000161" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__getitem__()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000290" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__getitem__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000211" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__iadd__()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000141" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__iadd__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000215" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__iter__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000220" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__iter__()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000265" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__len__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000221" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">__radd__()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000143" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__radd__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000224" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__repr__()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000147" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__repr__()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000166" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__repr__()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000177" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__setitem__()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000168" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__setitem__()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000227" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__str__()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000150" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__str__()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000169" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__str__()</tt> (Renderable method),
+    <span><a href="sect0040.html#a0000000337" title="Renderable MixIn">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">__unicode__()</tt> (Renderable method),
+    <span><a href="sect0040.html#a0000000338" title="Renderable MixIn">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.A">A</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">acceptsArgument()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000172" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">add_section()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000124" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">addGlobal()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000285" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">addLocal()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000286" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">alt</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000361" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">append()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000287" title="Context Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">append()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000206" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">appendChild()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000207" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">args</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000091" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">argSource</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000092" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">arguments</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000093" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">attributes</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000192" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.B">B</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">blockType</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000094" title="Macro Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">BooleanOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000179" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.C">C</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">cast()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000173" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">catcode()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000288" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">categories()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000125" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">chardef()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000289" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">charsubs</tt> (TeXDocument attribute),
+    <span><a href="sect0036.html#a0000000254" title="TeXDocument Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">checkValues()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000174" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">childNodes</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000193" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">cleanup()</tt> (Renderer method),
+    <span><a href="sect0039.html#a0000000327" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">clearValue()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000175" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">cloneNode()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000208" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">close()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000351" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">command</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000341" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Command</tt> (class in plasTeX.DOM),
+    <span><a href="sect0033.html#a0000000249" title="Command Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">compileLatex()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000352" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">compiler</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000342" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">CompoundOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000180" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">config</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000362" title="Image Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">config</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000343" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">ConfigManager</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0024.html#a0000000122" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">ConfigSection</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0025.html#a0000000154" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Context</tt> (class in plasTeX.Context),
+    <span><a href="sect0038.html#a0000000279" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">contexts</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000280" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">convert()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000353" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">copy()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000126" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">copy()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000157" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">CountedOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000181" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">counter</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000095" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">counters</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000281" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">createDocumentFragment()</tt> (Document method),
+    <span><a href="sect0032.html#a0000000244" title="Document Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">createElement()</tt> (Document method),
+    <span><a href="sect0032.html#a0000000245" title="Document Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">createTextNode()</tt> (Document method),
+    <span><a href="sect0032.html#a0000000246" title="Document Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">crop()</tt> (Image method),
+    <span><a href="sect0042.html#a0000000370" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">currentlabel</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000282" title="Context Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.D">D</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">data</tt> (ConfigSection attribute),
+    <span><a href="sect0025.html#a0000000155" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">data</tt> (Text attribute),
+    <span><a href="sect0031.html#a0000000239" title="Text Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">default</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000316" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">defaults()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000127" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">defaults()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000158" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">depth</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000363" title="Image Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">digest()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000108" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">digestUntil()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000109" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">disableLogging()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000259" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Document</tt> (class in plasTeX.DOM),
+    <span><a href="sect0032.html#a0000000243" title="Document Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">DocumentFragment</tt> (class in plasTeX.DOM),
+    <span><a href="sect0029.html#a0000000230" title="DocumentFragment Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.E">E</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">Element</tt> (class in plasTeX.DOM),
+    <span><a href="sect0030.html#a0000000231" title="Element Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Environment</tt> (class in plasTeX.DOM),
+    <span><a href="sect0034.html#a0000000250" title="Environment Objects">1</a></span>
+    
+</li><li>
+    environment variables,
+    
+    <ul>
+    <li>
+        PYTHONPATH,
+        <span><a href="sect0047.html#a0000000373" title="How can I get plasTeX to find my LaTeX packages?">1</a></span>
+        
+    </li><li>
+        TEXINPUTS,
+        <span><a href="sect0037.html#a0000000269" title="TeX Objects">1</a></span>
+        
+    </li>
+    </ul>
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">executeConverter()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000354" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">expand()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000110" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">expandTokens()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000263" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">extend()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000210" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.F">F</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">fileExtension</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000344" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">fileExtension</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000317" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">filename</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000364" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">filename</tt> (Renderable attribute),
+    <span><a href="sect0040.html#a0000000333" title="Renderable MixIn">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">filename</tt> (TeX attribute),
+    <span><a href="sect0037.html#a0000000260" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">files</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000318" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">find()</tt> (Renderer method),
+    <span><a href="sect0039.html#a0000000328" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">FloatOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000186" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.G">G</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">GenericOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000171" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">get()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000129" title="ConfigManager Objects">1</a><span>, </span></span><span><a href="sect0025.html#a0000000159" title="ConfigSection Objects">2</a></span>
+    
+</li><li>
+    <tt class="ttfamily">get_category()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000131" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">get_opt()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000134" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">get_optlist()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000136" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getAttribute()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000232" title="Element Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getboolean()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000130" title="ConfigManager Objects">1</a><span>, </span></span><span><a href="sect0025.html#a0000000160" title="ConfigSection Objects">2</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getElementById()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000233" title="Element Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">getElementsByTagName()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000234" title="Element Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getfloat()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000132" title="ConfigManager Objects">1</a><span>, </span></span><span><a href="sect0025.html#a0000000163" title="ConfigSection Objects">2</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getImage()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000355" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getint()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000133" title="ConfigManager Objects">1</a><span>, </span></span><span><a href="sect0025.html#a0000000162" title="ConfigSection Objects">2</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getopt()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000135" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getraw()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000137" title="ConfigManager Objects">1</a><span>, </span></span><span><a href="sect0025.html#a0000000164" title="ConfigSection Objects">2</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getUserData()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000212" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">getValue()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000176" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.H">H</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">has_category()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000138" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">has_option()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000139" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">has_section()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000140" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">hasAttribute()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000235" title="Element Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">hasAttributes()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000213" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">hasChildNodes()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000214" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">height</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000365" title="Image Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.I">I</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">id</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000096" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">idref</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000097" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">image</tt> (Renderable attribute),
+    <span><a href="sect0040.html#a0000000334" title="Renderable MixIn">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Image</tt> (class in plasTeX.Imagers),
+    <span><a href="sect0042.html#a0000000360" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imageAttrs</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000345" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imageAttrs</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000319" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imager</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000321" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Imager</tt> (class in plasTeX.Imagers),
+    <span><a href="sect0041.html#a0000000340" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">images</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000347" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imageTypes</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000322" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imageUnits</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000346" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">imageUnits</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000320" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">importMacros()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000291" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">importNode()</tt> (Document method),
+    <span><a href="sect0032.html#a0000000247" title="Document Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">initialize()</tt> (Renderer method),
+    <span><a href="sect0039.html#a0000000329" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">input()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000264" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">InputDirectoryOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000182" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">InputFileOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000184" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">insert()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000216" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">insertBefore()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000217" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">IntegerOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000187" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">invoke()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000111" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">isElementContentWhitespace</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000194" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">isEqualNode()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000218" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">isMathMode</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000283" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">isSameNode()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000219" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">itertokens()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000266" title="TeX Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.J">J</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">jobname</tt> (TeX attribute),
+    <span><a href="sect0037.html#a0000000261" title="TeX Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.K">K</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">kpsewhich()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000267" title="TeX Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.L">L</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">label()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000292" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">labels</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000284" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">lastChild</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000195" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">length</tt> (Text attribute),
+    <span><a href="sect0031.html#a0000000240" title="Text Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">let()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000293" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">level</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000098" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">lineNumber</tt> (TeX attribute),
+    <span><a href="sect0037.html#a0000000262" title="TeX Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">loadBaseMacros()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000294" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">loadINIPackage()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000296" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">loadLanguage()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000295" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">loadPackage()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000297" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">locals()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000112" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">longdesc</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000366" title="Image Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.M">M</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">Macro</tt> (class in ),
+    <span><a href="sect0023.html#a0000000090" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">macroMode</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000100" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">macroName</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000099" title="Macro Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">mathMode</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000101" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">MultiOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000188" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.N">N</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">name</tt> (ConfigSection attribute),
+    <span><a href="sect0025.html#a0000000156" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newcommand()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000298" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newcount()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000299" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newcounter()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000300" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newdef()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000301" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newdimen()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000302" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newenvironment()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000303" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newFilename</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000348" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newFilename</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000324" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newif()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000304" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newImage()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000356" title="Imager Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">newmuskip()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000305" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">newskip()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000306" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">nextSibling</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000200" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Node</tt> (class in plasTeX.DOM),
+    <span><a href="sect0028.html#a0000000191" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">nodeName</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000102" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">nodeName</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000196" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">nodeType</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000197" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">nodeValue</tt> (Text attribute),
+    <span><a href="sect0031.html#a0000000241" title="Text Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">normalize()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000222" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">normalize()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000270" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">normalizeDocument()</tt> (Document method),
+    <span><a href="sect0032.html#a0000000248" title="Document Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.O">O</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">options()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000142" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">OutputDirectoryOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000183" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">OutputFileOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000185" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">outputType</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000325" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">ownerDocument</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000201" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.P">P</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">packages</tt> (Context attribute),
+    <span><a href="sect0038.html#a0000000307" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">paragraphs()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000113" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">parent</tt> (ConfigSection attribute),
+    <span><a href="sect0025.html#a0000000165" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">parentNode</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000198" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">parse()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000114" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">parse()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000271" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">path</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000367" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.ConfigManager</tt> (standard module),
+    <span><a href="module-plasTeX-ConfigManager.html#a0000000121" title="plasTeX.ConfigManager — plasTeX Configuration"><b class="bfseries">1</b></a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.Context</tt> (standard module),
+    <span><a href="module-plasTeX-Context.html#a0000000278" title="plasTeX.Context — The TeX Context"><b class="bfseries">1</b></a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.DOM</tt> (standard module),
+    <span><a href="module-plasTeX-DOM.html#a0000000190" title="plasTeX.DOM — The plasTeX Document Object Model (DOM)"><b class="bfseries">1</b></a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.Imagers</tt> (standard module),
+    <span><a href="module-plasTeX-Imagers.html#a0000000339" title="plasTeX.Imagers — The plasTeX Imaging Framework"><b class="bfseries">1</b></a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.Renderers</tt> (standard module),
+    <span><a href="module-plasTeX-Renderers.html#a0000000313" title="plasTeX.Renderers — The plasTeX Rendering Framework"><b class="bfseries">1</b></a></span>
+    
+</li><li>
+    <tt class="ttfamily">plasTeX.TeX</tt> (standard module),
+    <span><a href="module-plasTeX-TeX.html#a0000000257" title="plasTeX.TeX — The TeX Stream"><b class="bfseries">1</b></a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">pop()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000308" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">pop()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000223" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">postArgument()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000115" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">postParse()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000116" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">preamble</tt> (TeXDocument attribute),
+    <span><a href="sect0036.html#a0000000255" title="TeXDocument Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">preArgument()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000117" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">preParse()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000118" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">previousSibling</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000199" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">processFileContent()</tt> (Renderer method),
+    <span><a href="sect0039.html#a0000000330" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">push()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000309" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">pushToken()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000272" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">pushTokens()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000273" title="TeX Objects">1</a></span>
+    
+</li><li>
+    PYTHONPATH,
+    <span><a href="sect0047.html#a0000000372" title="How can I get plasTeX to find my LaTeX packages?">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.R">R</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">read()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000128" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">readArgument()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000274" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">readArgumentAndSource()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000275" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">readfp()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000144" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">ref</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000103" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">ref()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000310" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">refstepcounter()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000119" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">remove_option()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000145" title="ConfigManager Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">remove_section()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000146" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">removeAttribute()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000236" title="Element Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">removeChild()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000226" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">render()</tt> (Renderer method),
+    <span><a href="sect0039.html#a0000000331" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Renderable</tt> (class in plasTeX.Renderers),
+    <span><a href="sect0040.html#a0000000332" title="Renderable MixIn">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Renderer</tt> (class in plasTeX.Renderers),
+    <span><a href="sect0039.html#a0000000315" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">replaceChild()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000225" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">requiresArgument()</tt> (GenericOption method),
+    <span><a href="sect0026.html#a0000000178" title="Configuration Option Types">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.S">S</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">sections()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000148" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">set()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000149" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">set()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000167" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">setAttribute()</tt> (Element method),
+    <span><a href="sect0030.html#a0000000237" title="Element Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">setUserData()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000228" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">setVerbatimCatcodes()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000311" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">source</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000349" title="Imager Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">source</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000104" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">source</tt> (TeXDocument attribute),
+    <span><a href="sect0036.html#a0000000256" title="TeXDocument Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">source</tt> (TeXFragment attribute),
+    <span><a href="sect0035.html#a0000000252" title="TeXFragment Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">source()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000276" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">stepcounter()</tt> (Macro method),
+    <span><a href="sect0023.html#a0000000120" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">StringOption</tt> (class in plasTeX.ConfigManager),
+    <span><a href="sect0026.html#a0000000189" title="Configuration Option Types">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">style</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000105" title="Macro Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.T">T</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">tagName</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000106" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">TeX</tt> (class in plasTeX.TeX),
+    <span><a href="sect0037.html#a0000000258" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">TeXDocument</tt> (class in plasTeX.DOM),
+    <span><a href="sect0036.html#a0000000253" title="TeXDocument Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">TeXFragment</tt> (class in plasTeX.DOM),
+    <span><a href="sect0035.html#a0000000251" title="TeXFragment Objects">1</a></span>
+    
+</li><li>
+    TEXINPUTS,
+    <span><a href="sect0037.html#a0000000268" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">Text</tt> (class in plasTeX.DOM),
+    <span><a href="sect0031.html#a0000000238" title="Text Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">textContent</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000202" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">textDefault</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000326" title="Renderer Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">textTokens()</tt> (TeX method),
+    <span><a href="sect0037.html#a0000000277" title="TeX Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">title</tt> (Macro attribute),
+    <span><a href="sect0023.html#a0000000107" title="Macro Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">to_string()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000151" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">to_string()</tt> (ConfigSection method),
+    <span><a href="sect0025.html#a0000000170" title="ConfigSection Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">toXML()</tt> (Node method),
+    <span><a href="sect0028.html#a0000000229" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.U">U</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">unicode</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000203" title="Node Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">url</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000368" title="Image Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">url</tt> (Renderable attribute),
+    <span><a href="sect0040.html#a0000000336" title="Renderable MixIn">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">usage()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000153" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">userdata</tt> (Node attribute),
+    <span><a href="sect0028.html#a0000000204" title="Node Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.V">V</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">vectorImage</tt> (Renderable attribute),
+    <span><a href="sect0040.html#a0000000335" title="Renderable MixIn">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">vectorImageTypes</tt> (Renderer attribute),
+    <span><a href="sect0039.html#a0000000323" title="Renderer Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">verification</tt> (Imager attribute),
+    <span><a href="sect0041.html#a0000000350" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">verify()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000357" title="Imager Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div><div class="theindex">
+
+<h2 id="IDXGROUP.W">W</h2>
+
+<table width="100%">
+<tr>
+<td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">whichCode()</tt> (Context method),
+    <span><a href="sect0038.html#a0000000312" title="Context Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">wholeText</tt> (Text attribute),
+    <span><a href="sect0031.html#a0000000242" title="Text Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">width</tt> (Image attribute),
+    <span><a href="sect0042.html#a0000000369" title="Image Objects">1</a></span>
+    
+</li>
+</ul>
+</td><td width="50%">
+<ul>
+<li>
+    <tt class="ttfamily">write()</tt> (ConfigManager method),
+    <span><a href="sect0024.html#a0000000152" title="ConfigManager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">writeImage()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000358" title="Imager Objects">1</a></span>
+    
+</li><li>
+    <tt class="ttfamily">writePreamble()</tt> (Imager method),
+    <span><a href="sect0041.html#a0000000359" title="Imager Objects">1</a></span>
+    
+</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</div>
+
+</div></div>
 
 
 
@@ -70,23 +1583,21 @@
 <div class="navigation">
 <table cellspacing="2" cellpadding="0" width="100%">
 <tr>
-<td><a href="sect0047.html" title="Parsing LaTeX"><img alt="Previous: Parsing LaTeX" border="0" src="icons/previous.gif" width="32" height="32" /></a></td>
+<td><a href="sect0047.html" title="How can I get plasTeX to find my LaTeX packages?"><img alt="Previous: How can I get plasTeX to find my LaTeX packages?" border="0" src="icons/previous.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0047.html" title="Parsing LaTeX"><img alt="Up: Parsing LaTeX" border="0" src="icons/up.gif" width="32" height="32" /></a></td>
+<td><a href="index.html" title="plasTeX — A Python Framework for Processing LaTeX Documents"><img alt="Up: plasTeX — A Python Framework for Processing LaTeX Documents" border="0" src="icons/up.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0049.html" title="How can I get plasTeX to find my LaTeX packages?"><img alt="Next: How can I get plasTeX to find my LaTeX packages?" border="0" src="icons/next.gif" width="32" height="32" /></a></td>
 
+<td><img border="0" alt="" src="icons/blank.gif" width="32" height="32" /></td>
 <td class="navtitle" align="center">plasTeX — A Python Framework for Processing LaTeX Documents</td>
 <td><a href="index.html" title="Table of Contents"><img border="0" alt="" src="icons/contents.gif" width="32" height="32" /></a></td>
 
-<td><a href="sect0050.html" title="Index"><img border="0" alt="" src="icons/index.gif" width="32" height="32" /></a></td>
+<td><a href="sect0048.html" title="Index"><img border="0" alt="" src="icons/index.gif" width="32" height="32" /></a></td>
 
 <td><img border="0" alt="" src="icons/blank.gif" width="32" height="32" /></td>
 </tr>
 </table>
 </div>
-
-<script language="javascript" src="icons/imgadjust.js" type="text/javascript"></script>
 
 </body>
 </html>

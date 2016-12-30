@@ -1,0 +1,103 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=plastex.chm
+Contents file=chm.hhc
+Default Window=Help
+Default topic=index.html
+Display compile progress=Yes
+Error log file=help.log
+Full-text search=Yes
+Index file=chm.hhk
+Language=0x0 
+Title=plasTeX &#8212; A Python Framework for Processing LaTeX Documents
+
+[WINDOWS]
+Help="plasTeX &#8212; A Python Framework for Processing LaTeX Documents","chm.hhc","chm.hhk","index.html","index.html",,,,,0x73520,,0x383e,[200,200,1000,800],,,,,,,0
+
+[FILES]
+sec-zpttutorial.html
+module-plasTeX-TeX.html
+sect0027.html
+sect0043.html
+sect0010.html
+sec-simple-renderer-ex.html
+sect0006.html
+sec-context-language.html
+sect0021.html
+sect0031.html
+sect0011.html
+sect0036.html
+module-plasTeX-Context.html
+sec-sections.html
+sect0034.html
+sect0033.html
+sect0040.html
+index.html
+sec-contextmacros.html
+sect0004.html
+sect0042.html
+sect0038.html
+sect0032.html
+module-plasTeX-DOM.html
+sec-config-document.html
+sect0047.html
+subsec-renderer-from-script.html
+sec-tableofcontents.html
+sec-lists.html
+sect0024.html
+sect0008.html
+sect0039.html
+sect0005.html
+module-plasTeX-Imagers.html
+sect0009.html
+sect0041.html
+sect0015.html
+sect0026.html
+sec-document.html
+sect0020.html
+sec-packages.html
+sect0022.html
+sect0019.html
+sect0028.html
+sect0016.html
+sec-links.html
+sect0018.html
+sect0017.html
+sect0045.html
+sect0012.html
+sect0025.html
+sect0029.html
+sec-config-html5.html
+sect0002.html
+sect0001.html
+sect0030.html
+sec-zpt.html
+sect0014.html
+sec-macros-api.html
+sec-general-options.html
+sect0023.html
+sect0007.html
+sect0013.html
+sec-macroclasses.html
+module-plasTeX-Renderers.html
+sec-macros.html
+sec-renderable.html
+sec-complexdoc.html
+sec-command-line.html
+sect0044.html
+module-plasTeX-ConfigManager.html
+sec-config-links.html
+sec-paragraphs.html
+sect0037.html
+sec-arrays.html
+sec-config-files.html
+sect0046.html
+sec-html5.html
+sect0035.html
+sec-html5-pkg.html
+sec-config-images.html
+sec-inimacros.html
+sect0003.html
+
+
+[MERGE FILES]

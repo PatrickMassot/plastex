@@ -212,12 +212,10 @@ table.list td {
 
 /* Quotations and Verse */
 .quotation, .quote, .verse {
-    text-indent: 2em;
 }
 .quotation p, .quote p, .verse p {
-    text-indent: 2em;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0.5em;
 }
 
 /* Rules */
@@ -325,3 +323,11 @@ body {
     padding-left: 0.5ex;
     padding-right: 0.5ex;
 }
+
+/* subfig package styles */
+.subfloat { 
+    display: inline-table; 
+    padding: 1em 3em 1em 3em; 
+    text-align: center 
+}
+
