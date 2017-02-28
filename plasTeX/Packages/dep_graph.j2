@@ -1,2 +1,71 @@
-Hello graph
-{{ graph.nodes() }}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ context.terms.get('Dependency graph', 'Dependency graph') }}</title>
+	<meta name="generator" content="plasTeX" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="styles/theme-green.css" />
+	<link rel="stylesheet" href="styles/dep_graph.css" />
+	{% if config.html5['use-mathjax'] %}
+	<script type="text/x-mathjax-config">
+	{% if config.html5['mathjax-dollars'] %}
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	{% else %}
+		MathJax.Hub.Config({tex2jax: {inlineMath: [ ['\\(','\\)']]}});
+	{% endif %}
+	</script>
+	<script type="text/javascript" src="{{ config.html5['mathjax-url'] }}">
+	</script>
+{% endif %}
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+    #container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="js/sigma.min.js"></script>
+  <script>
+    // Let's first initialize sigma:
+    var s = new sigma('container');
+		s.settings({
+			edgeColor: 'default',
+			minArrowSize: 100,
+			defaultEdgeColor: '#999'
+		});
+
+{% for node in graph.nodes() %}
+    s.graph.addNode({
+      id: "{{ node.id }}",
+      label: "{{ node.id }}",
+      x: "{{ positions[node][0] }}",
+      y: "{{ positions[node][1] }}",
+      size: 1,
+      color: '#f00'
+    })
+{% endfor %}
+
+{% for source, target in graph.edges() %}
+    s.graph.addEdge({
+      id: '{{ source.id }} -> {{ target.id }}',
+      // Reference extremities:
+      source: '{{ source.id }}',
+      target: '{{ target.id }}',
+      type: 'arrow'
+    });
+
+{% endfor %}
+
+    // Finally, let's ask our sigma instance to refresh:
+    s.refresh();
+  </script>
+</body>
+</html>
+

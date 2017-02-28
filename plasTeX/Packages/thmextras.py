@@ -203,8 +203,11 @@ def ProcessOptions(options, document):
 
             def makeDepGraph(document):
                 graph = document.userdata['thmextras_dep_graph']
+                positions = nx.spring_layout(graph, iterations=100)
                 tpl.stream(
                         graph=graph,
+                        positions=positions,
+                        context=document.context,
                         config=document.config).dump(graph_target)
                 return [graph_target]
 
@@ -220,7 +223,11 @@ def ProcessOptions(options, document):
                     renderers=['html5'],
                     package='thmextras',
                     data='dep_graph.js')
-            document.addPackageResource([cb, css, js])
+            sigmajs = PackageJs(
+                    renderers=['html5'],
+                    package='thmextras',
+                    data='sigma.min.js')
+            document.addPackageResource([cb, css, js, sigmajs])
 
     if 'quizz' in options:
         js = PackageJs(
