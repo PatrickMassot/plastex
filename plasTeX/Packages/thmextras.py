@@ -223,11 +223,7 @@ def ProcessOptions(options, document):
                     renderers=['html5'],
                     package='thmextras',
                     data='dep_graph.js')
-            sigmajs = PackageJs(
-                    renderers=['html5'],
-                    package='thmextras',
-                    data='sigma.min.js')
-            document.addPackageResource([cb, css, js, sigmajs])
+            document.addPackageResource([cb, css, js])
 
     if 'quizz' in options:
         js = PackageJs(
