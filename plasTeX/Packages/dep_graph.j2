@@ -41,10 +41,17 @@
 			stroke: black;
 			stroke-width: 3px;
 		}
+
+		svg.dep_graph {
+			width: 50%;
+			height: 100vh;
+		}
   </style>
 </head>
 <body>
-<svg width="960" height="600"></svg>
+<svg class="dep_graph" viewBox="0 0 100 100"></svg>
+
+<div id="statements">
 {%- for thm in graph.nodes() %}
 <div class="thm" id="{{ thm.id }}" style="display: none">
   <div class="thm_thmheading">
@@ -58,7 +65,7 @@
     <span class="{{thm.thmName}}_thmtitle">{{ thm.title }}</span>
     {% endif %}
   </div>
-  <div class="thm_thm_content">{{ thm }}</div>
+  <div class="thm_thmcontent">{{ thm }}</div>
  </div>
 {%- endfor -%}
 </div>
@@ -92,39 +99,28 @@ var svg = d3.select("svg"),
     transform = d3.zoomIdentity;
 
 svg.append("svg:defs").append("svg:marker")
-    .attr("id", "triangle")
-    .attr("refX", 12)
-    .attr("refY", 6)
-    .attr("markerWidth", 12)
-    .attr("markerHeight", 12)
+    .attr("id", "arrow")
+    .attr("refX", 6)
+    .attr("refY", 3)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
     .attr("orient", "auto")
     .append("path")
-    .attr("d", "M 0 0 12 6 0 12 3 6")
+    .attr("d", "M 0 0 6 3 0 6 1.5 3")
     .style("fill", "black");
-
-svg.append("svg:defs")
-	.append("svg:marker")
-	.attr("id", "arrow")	
-	.attr("refX", 10)
-	.attr("refY", 6)
-	.attr("markerWidth", 13)
-	.attr("markerHeight", 13)
-	.attr("orient", "auto")
-	.append("svg:path")
-	.attr("d", "M2,2 L2,11 L10,6 L2,2");
 
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody().strength(-1000))
-    .force("center", d3.forceCenter(width / 2, height / 2));
+    .force("charge", d3.forceManyBody().strength(-50))
+    .force("center", d3.forceCenter(50, 50));
 
 var link = svg.append("g")
     .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-		.attr("marker-end", "url(#triangle)");
+		.attr("marker-end", "url(#arrow)");
 
 
 var node = svg.append("g")
@@ -132,7 +128,7 @@ var node = svg.append("g")
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
-    .attr("r", 5)
+    .attr("r", 1.5)
     .on("mouseover", function(){
 			var obj = d3.select(this);
 			if (obj.classed("active")) {
@@ -164,7 +160,7 @@ var node = svg.append("g")
 
 // Zoom
 svg.call(d3.zoom()
-    .scaleExtent([1 / 2, 8])
+    .scaleExtent([1 / 8, 8])
     .on("zoom", zoomed));
 
 function zoomed() {
