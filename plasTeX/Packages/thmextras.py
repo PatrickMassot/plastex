@@ -14,6 +14,10 @@ from plasTeX.PackageResource import (
 from plasTeX.Logging import getLogger
 log = getLogger()
 
+class DepGraph():
+    def __init__(self):
+        self.nodes = set()
+        self.edges = set()
 
 class uses(Command):
     """ \uses{labels list} """
@@ -29,10 +33,10 @@ class uses(Command):
             node.setUserData('uses', used)
             if 'thmextras_dep_graph' in doc.userdata:
                 graph = doc.userdata.get('thmextras_dep_graph')
-                graph.add_node(node)
-                graph.add_nodes_from(used)
+                graph.nodes.add(node)
+                graph.nodes.update(used)
                 for thm in used:
-                    graph.add_edge(thm, node)
+                    graph.edges.add((thm, node))
 
         doc.postParseCallbacks.append(update_used)
 
@@ -176,54 +180,46 @@ def ProcessOptions(options, document):
     document.addPackageResource(links)
 
     if 'dep_graph' in options:
-        ok = True
-        try:
-            import networkx as nx
-        except ImportError:
-            log.warning('Dependency graphs need networkx package.')
-            ok = False
-        try:
-            import numpy
-        except ImportError:
-            log.warning('Dependency graphs need numpy package.')
-            ok = False
-        if ok:
-            document.userdata['thmextras_dep_graph'] = nx.DiGraph()
-            graph_target = options.get( 'dep_graph_target', 'dep_graph.html')
-            
-            default_template = os.path.join(os.path.dirname(__file__), 'dep_graph.j2')
-            graph_template = options.get( 'dep_graph_tpl', default_template)
-            try: 
-                with open(graph_template) as src:
-                    tpl = Template(src.read())
-            except IOError:
-                log.warning('DepGraph template read error, using default template')
-                with open(default_template) as src:
-                    tpl = Template(src.read())
+        d3_url = options.get('d3_url', 'https://d3js.org/d3.v4.min.js')
+        jquery_url = options.get('jquery_url', 'http://code.jquery.com/jquery.min.js')
+        title = options.get('title', 'Dependencies')
+        document.userdata['thmextras_dep_graph'] = DepGraph()
+        graph_target = options.get( 'dep_graph_target', 'dep_graph.html')
+        
+        default_template = os.path.join(os.path.dirname(__file__), 'dep_graph.j2')
+        graph_template = options.get( 'dep_graph_tpl', default_template)
+        try: 
+            with open(graph_template) as src:
+                tpl = Template(src.read())
+        except IOError:
+            log.warning('DepGraph template read error, using default template')
+            with open(default_template) as src:
+                tpl = Template(src.read())
 
-            def makeDepGraph(document):
-                graph = document.userdata['thmextras_dep_graph']
-                positions = nx.spring_layout(graph, iterations=100)
-                tpl.stream(
-                        graph=graph,
-                        positions=positions,
-                        context=document.context,
-                        config=document.config).dump(graph_target)
-                return [graph_target]
+        def makeDepGraph(document):
+            graph = document.userdata['thmextras_dep_graph']
+            tpl.stream(
+                    graph=graph,
+                    context=document.context,
+                    d3_url=d3_url,
+                    jquery_url=jquery_url,
+                    title=title,
+                    config=document.config).dump(graph_target)
+            return [graph_target]
 
-            cb = PackageResource(
-                    renderers=['html5'],
-                    key='preCleanupCallbacks',
-                    data=makeDepGraph)
-            css = PackageCss(
-                    renderers=['html5'],
-                    package='thmextras',
-                    data='dep_graph.css')
-            js = PackageJs(
-                    renderers=['html5'],
-                    package='thmextras',
-                    data='dep_graph.js')
-            document.addPackageResource([cb, css, js])
+        cb = PackageResource(
+                renderers=['html5'],
+                key='preCleanupCallbacks',
+                data=makeDepGraph)
+        css = PackageCss(
+                renderers=['html5'],
+                package='thmextras',
+                data='dep_graph.css')
+        js = PackageJs(
+                renderers=['html5'],
+                package='thmextras',
+                data='dep_graph.js')
+        document.addPackageResource([cb, css, js])
 
     if 'quizz' in options:
         js = PackageJs(

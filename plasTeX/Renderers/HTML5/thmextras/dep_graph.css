@@ -1,0 +1,27 @@
+svg.dep_graph {
+	width: 50%;
+	height: 100vh;
+}
+
+.links line {
+	stroke: #aaa;
+}
+
+.nodes circle {
+	pointer-events: all;
+	stroke: none;
+}
+
+circle.active  {
+	fill: red;
+}
+
+circle.activehighlight  {
+	stroke: red;
+	stroke-width: 3px;
+}
+
+circle.highlight  {
+	stroke: black;
+	stroke-width: 3px;
+}
