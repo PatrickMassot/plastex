@@ -1,6 +1,30 @@
 """
 Package thmextras
 Goodies for theorem environment and sample specific plasTeX package.
+
+Options:
+dep_graph: produce dependency graph
+
+d3_url: url for the D3js library
+jquery_url: url for the jquery library
+dep_graph_target: dependency graph output file (relative to global output
+directory)
+dep_graph_tpl: template file for dependency graph, relative to the current
+directory
+
+quizz: enable quizz generation
+
+coverage: produce coverage report
+
+coverage_tpl: template file for coverage report, relative to the current
+directory
+coverage_target: coverage report output file (relative to global output
+directory)
+coverage_thms: list of theorem environment covered, separated by +
+coverage_sectioning: coverage report section grouping
+
+showmore: enable buttons showing or hiding proofs.
+
 """
 import os
 import string

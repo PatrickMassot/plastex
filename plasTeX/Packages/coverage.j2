@@ -12,10 +12,10 @@
 <script type="text/javascript" src="{{ config.html5['mathjax-url'] }}">
 </script>
 {% endif %}
-<title>{{ terms.get('Covering report', 'Covering report') }}</title>
+<title>{{ terms.get('Coverage report', 'Coverage report') }}</title>
 </head>
 <body>
-<h1>{{ terms.get('Covering report', 'Covering report') }}</h1>
+<h1>{{ terms.get('Coverage report', 'Coverage report') }}</h1>
 {% for partial in report.partials %}
 <section>
   <h2>{{ partial.title }} <span class="{{ partial.status }}">{{ partial.coverage }}%</span></h2>
