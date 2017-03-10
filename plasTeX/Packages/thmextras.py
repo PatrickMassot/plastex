@@ -214,15 +214,15 @@ def ProcessOptions(options, document):
         graph_template = options.get( 'dep_graph_tpl', default_template)
         try: 
             with open(graph_template) as src:
-                tpl = Template(src.read())
+                graph_tpl = Template(src.read())
         except IOError:
             log.warning('DepGraph template read error, using default template')
             with open(default_template) as src:
-                tpl = Template(src.read())
+                graph_tpl = Template(src.read())
 
         def makeDepGraph(document):
             graph = document.userdata['thmextras_dep_graph']
-            tpl.stream(
+            graph_tpl.stream(
                     graph=graph,
                     context=document.context,
                     d3_url=d3_url,
@@ -257,11 +257,11 @@ def ProcessOptions(options, document):
         coverage_template = options.get( 'coverage_tpl', default_template)
         try: 
             with open(coverage_template) as src:
-                tpl = Template(src.read())
+                cov_tpl = Template(src.read())
         except IOError:
             log.warning('Coverage template read error, using default template')
             with open(default_template) as src:
-                tpl = Template(src.read())
+                cov_tpl = Template(src.read())
 
 
         coverage_target = options.get( 'coverage_target', 'coverage.html')
@@ -274,7 +274,7 @@ def ProcessOptions(options, document):
         def makeCoverageReport(document):
             sections = document.getElementsByTagName(section)
             report = Report([PartialReport.from_section(sec, thm_types) for sec in sections])
-            tpl.stream(
+            cov_tpl.stream(
                     report=report, 
                     config=document.config,
                     terms=document.context.terms).dump(outfile)
