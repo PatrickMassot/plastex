@@ -44,7 +44,7 @@ class DepGraph():
         self.edges = set()
 
 class uses(Command):
-    """ \uses{labels list} """
+    """ \\uses{labels list} """
     args = 'labels:list:nox'
 
     def digest(self, tokens):
