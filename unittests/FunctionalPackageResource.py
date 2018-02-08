@@ -6,6 +6,7 @@ from plasTeX.Renderers.HTML5 import Renderer
 from plasTeX.Config import config
 from plasTeX.Renderers.HTML5.Config import config as html5_config
 
+
 def test_package_resource(tmpdir):
 	doc = TeXDocument(config=config+html5_config)
 	tex = TeX(doc)
