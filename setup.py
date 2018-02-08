@@ -4,9 +4,10 @@ try:
 except ImportError:
     from distutils.core import setup
 
-templates = ['*.html','*.htm','*.xml','*.zpt','*.zpts']
-images = ['*.gif','*.png','*.jpg','*.jpeg','*.js','*.htc']
+templates = ['*.html','*.htm','*.xml','*.zpt','*.zpts', '*.jinja2*']
+images = ['*.gif','*.png','*.jpg','*.jpeg','*.js','*.htc', '*.svg']
 styles = ['*.css']
+js = ['*.js']
 
 setup(name="plasTeX",
       description="LaTeX document processing framework",
@@ -47,6 +48,11 @@ setup(name="plasTeX",
          'plasTeX.Renderers.S5.Themes.default',
          'plasTeX.Renderers.S5.Themes.default.ui',
          'plasTeX.Renderers.S5.Themes.default.ui.default',
+         'plasTeX.Renderers.HTML5',
+         'plasTeX.Renderers.HTML5.Themes',
+         'plasTeX.Renderers.HTML5.Themes.default',
+         'plasTeX.Renderers.HTML5.Themes.default.js',
+         'plasTeX.Renderers.HTML5.Themes.default.styles',
       ],
       package_data = {
          'plasTeX': ['*.xml'],
@@ -65,6 +71,10 @@ setup(name="plasTeX",
          'plasTeX.Renderers.S5': templates,
          'plasTeX.Renderers.S5.Themes.default': templates,
          'plasTeX.Renderers.S5.Themes.default.ui.default': templates+styles+images,
+         'plasTeX.Renderers.HTML5.Themes': templates,
+         'plasTeX.Renderers.HTML5.Themes.default': templates+images,
+         'plasTeX.Renderers.HTML5.Themes.default.js': js,
+         'plasTeX.Renderers.HTML5.Themes.default.styles': styles,
       },
       scripts=['plasTeX/plastex'],
 )
