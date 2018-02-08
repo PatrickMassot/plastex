@@ -175,7 +175,7 @@ def test_functional(tmpdir):
     cur_dir = os.getcwd()
     tmpdir.join('test.tex').write("""
     \documentclass{article} 
-    \usepackage{tikz, tikz-cd}
+    \\usepackage{tikz, tikz-cd}
 
     \\begin{document}
     \\begin{tikzpicture}
