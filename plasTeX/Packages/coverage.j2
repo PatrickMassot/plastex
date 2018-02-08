@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css" />
+<link rel="stylesheet" href="styles/style_coverage.css" />
+{% if config.html5['use-mathjax'] %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="{{ config.html5['mathjax-url'] }}">
+</script>
+{% endif %}
+<title>{{ terms.get('Coverage report', 'Coverage report') }}</title>
+</head>
+<body>
+<h1>{{ terms.get('Coverage report', 'Coverage report') }}</h1>
+{% for partial in report.partials %}
+<section>
+  <h2>{{ partial.title }} <span class="{{ partial.status }}">{{ partial.coverage }}%</span></h2>
+  {% if partial.nb_not_covered %}
+  <ul class="coverage">
+    {% for thm in partial.thm_reports %}
+    {% if not thm.covered_by %}
+    <li>
+      <div class="thm_thmheading">{{ thm.caption }} ({{ thm.id }})</div>
+      <div class="thm_thm_content">{{ thm.statement }}</div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/coverage.js"></script>
+</body>
+</html>
