@@ -30,7 +30,7 @@ else:
         import ipdb as pdb
     except ImportError:
         import pdb
-        
+
     @contextfunction
     def debug(context):
         pdb.set_trace()
