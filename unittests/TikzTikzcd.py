@@ -10,7 +10,7 @@ case the change is desired.
 
 import filecmp
 import os, shutil
-import sys, subprocess
+import sys
 from pathlib import Path
 
 from plasTeX.Config import config as base_config

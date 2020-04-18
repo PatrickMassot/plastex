@@ -1,21 +1,23 @@
 """
 This file runs imager tests by compiling TeX files and comparing
-with reference output images. 
-The "benchmarks" folder containing the expected outputs. 
+with reference output images.
+The "benchmarks" folder containing the expected outputs.
 
 Each time such a test fails, the output is placed into a "new" folder.
 This allows both easy comparison and replacement of the benchmark in
 case the change is desired.
 """
 
-import os, shutil
+import os, shutil, difflib
 from pathlib import Path
 import pytest
 
 from plasTeX.Renderers import Renderer
 from plasTeX.TeX import TeX
 
-@pytest.mark.parametrize('imager_tuple', 
+from helpers.utils import cmp_img
+
+@pytest.mark.parametrize('imager_tuple',
         [('pdf2svg', '.svg', 'vector-imager', 'pdflatex'),
          ('pdf2svg', '.svg', 'vector-imager', 'xelatex'),
          ('pdf2svg', '.svg', 'vector-imager', 'lualatex'),
@@ -38,7 +40,7 @@ def test_imager(imager_tuple, tmpdir):
 
     renderer = Renderer()
     renderer['math'] = lambda node: node.vectorImage.url
-                  
+
     directory = os.getcwd()
     os.chdir(str(tmpdir))
     renderer.render(tex.parse())
@@ -48,15 +50,22 @@ def test_imager(imager_tuple, tmpdir):
     root = Path(__file__).parent
 
     benchfile = root/'benchmarks'/"{}-{}{}".format(imager, compiler, ext)
-    if benchfile.exists():
-        bench = benchfile.read_bytes()
-        output = outfile.read_bytes()
-    else:
+    if not benchfile.exists():
         (root/'new').mkdir(parents=True, exist_ok=True)
         shutil.copyfile(str(outfile), str(root/'new'/benchfile.name))
         raise OSError('No benchmark file: %s' % benchfile)
 
-    if bench != output:
+    if ext == '.svg':
+        bench = benchfile.read_text().split('\n')
+        output = outfile.read_text().split('\n')
+        diff = '\n'.join(difflib.unified_diff(bench, output,
+            fromfile='benchmark', tofile='output')).strip()
+        failed = bool(diff)
+    else:
+        diff = cmp_img(str(benchfile.absolute()), str(outfile.absolute()))
+        failed = bool(diff > 0.0001)
+
+    if failed:
         (root/'new').mkdir(parents=True, exist_ok=True)
         shutil.copyfile(str(outfile), str(root/'new'/benchfile.name))
-        assert False, 'Differences were found'
+        assert False, 'Differences were found:\n' + str(diff)
